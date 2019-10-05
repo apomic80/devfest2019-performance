@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let item of items">
-    {{ item.label }} ({{ generateValue(item.value) }})
+    {{ item.label }} ({{ item.value | fibonacci }})
   </li>
 </ul>

@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
+import { FibonacciPipe } from './pipes/fibonacci.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    FibonacciPipe
   ],
   imports: [
     BrowserModule, FormsModule
