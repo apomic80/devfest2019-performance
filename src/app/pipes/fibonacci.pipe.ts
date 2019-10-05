@@ -1,10 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import memo from 'memo-decorator';
 
 @Pipe({
   name: 'fibonacci'
 })
 export class FibonacciPipe implements PipeTransform {
 
+  @memo()
   transform(value: any, ...args: any[]): any {
     console.log('value ' + value + ' generated');
     return this.fibonacci(value * 4);
