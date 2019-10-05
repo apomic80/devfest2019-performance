@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
 })
-export class ListaComponent implements OnInit {
+export class ListaComponent  {
 
   text: string;
   items: { label: string, value: number }[] = [];
