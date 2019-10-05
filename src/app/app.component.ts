@@ -11,6 +11,6 @@ export class AppComponent {
   addTextToList() {
     const randomValue =  Math.floor(Math.random() * 10) + 1;
     this.items.push({ label: this.text, value: randomValue });
-    // this.items = [...this.items];
+    this.items = [...this.items];
   }
 }
