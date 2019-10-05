@@ -1,18 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListaComponent implements OnInit {
+export class ListaComponent {
 
-  text: string;
-  items: { label: string, value: number }[] = [];
-
-  addTextToList() {
-    const randomValue = Math.floor(Math.random() * 10) + 1;
-    this.items.push({ label: this.text, value: randomValue });
-  }
+  @Input() items: { label: string, value: number }[] = [];
 
   generateValue(value: number) {
     console.log('value ' + value + ' generated');

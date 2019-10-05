@@ -1,4 +1,3 @@
-<input type="text" class="textbox" [(ngModel)]="text" (keydown.enter)="addTextToList()">
 <ul>
   <li *ngFor="let item of items">
     {{ item.label }} ({{ generateValue(item.value) }})
